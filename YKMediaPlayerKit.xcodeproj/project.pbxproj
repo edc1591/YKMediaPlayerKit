@@ -29,7 +29,6 @@
 		2B9896B7197BA3000075AD44 /* YKUnKnownVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9896B6197BA3000075AD44 /* YKUnKnownVideo.m */; };
 		6DC1AE8C1F150FFD00F749C0 /* HCYoutubeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1AE8B1F150FFD00F749C0 /* HCYoutubeParser.m */; };
 		6DC1AE8F1F1512EE00F749C0 /* YKAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1AE8E1F1512EE00F749C0 /* YKAVPlayerViewController.m */; };
-		6DC1AE921F15130300F749C0 /* YKFacebookVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1AE911F15130300F749C0 /* YKFacebookVideo.m */; };
 		6DC1AE951F15130F00F749C0 /* YKDailymotionVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1AE941F15130F00F749C0 /* YKDailymotionVideo.m */; };
 		6DC1AE981F15131900F749C0 /* YKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC1AE971F15131900F749C0 /* YKWebViewController.m */; };
 		A44DECD41C3BE9BE007C00B5 /* YKMainVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = A44DECD21C3BE9BE007C00B5 /* YKMainVideo.m */; };
@@ -81,8 +80,6 @@
 		6DC1AE8B1F150FFD00F749C0 /* HCYoutubeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCYoutubeParser.m; sourceTree = "<group>"; };
 		6DC1AE8D1F1512EE00F749C0 /* YKAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKAVPlayerViewController.h; sourceTree = "<group>"; };
 		6DC1AE8E1F1512EE00F749C0 /* YKAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAVPlayerViewController.m; sourceTree = "<group>"; };
-		6DC1AE901F15130300F749C0 /* YKFacebookVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKFacebookVideo.h; sourceTree = "<group>"; };
-		6DC1AE911F15130300F749C0 /* YKFacebookVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKFacebookVideo.m; sourceTree = "<group>"; };
 		6DC1AE931F15130F00F749C0 /* YKDailymotionVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDailymotionVideo.h; sourceTree = "<group>"; };
 		6DC1AE941F15130F00F749C0 /* YKDailymotionVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDailymotionVideo.m; sourceTree = "<group>"; };
 		6DC1AE961F15131900F749C0 /* YKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWebViewController.h; sourceTree = "<group>"; };
@@ -219,8 +216,6 @@
 				2B8EAB6218D25EF600F21000 /* YKDirectVideo.m */,
 				6DC1AE931F15130F00F749C0 /* YKDailymotionVideo.h */,
 				6DC1AE941F15130F00F749C0 /* YKDailymotionVideo.m */,
-				6DC1AE901F15130300F749C0 /* YKFacebookVideo.h */,
-				6DC1AE911F15130300F749C0 /* YKFacebookVideo.m */,
 				2B9896B5197BA3000075AD44 /* YKUnKnownVideo.h */,
 				2B9896B6197BA3000075AD44 /* YKUnKnownVideo.m */,
 				6DC1AE961F15131900F749C0 /* YKWebViewController.h */,
@@ -249,8 +244,6 @@
 				2B087EB418CB033900D31A86 /* Sources */,
 				2B087EB518CB033900D31A86 /* Frameworks */,
 				2B087EB618CB033900D31A86 /* Resources */,
-				82EB6A9E2A8372F201382492 /* [CP] Embed Pods Frameworks */,
-				B4AD7D8371F45D79999BA995 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,43 +337,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		82EB6A9E2A8372F201382492 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4AD7D8371F45D79999BA995 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -395,7 +361,6 @@
 				6DC1AE8F1F1512EE00F749C0 /* YKAVPlayerViewController.m in Sources */,
 				2B087ECD18CB033900D31A86 /* ViewController.m in Sources */,
 				6DC1AE8C1F150FFD00F749C0 /* HCYoutubeParser.m in Sources */,
-				6DC1AE921F15130300F749C0 /* YKFacebookVideo.m in Sources */,
 				2B8EAB7018D25EF600F21000 /* YKYouTubeVideo.m in Sources */,
 				6DC1AE981F15131900F749C0 /* YKWebViewController.m in Sources */,
 				2B8EAB6E18D25EF600F21000 /* YKMediaPlayerKit.m in Sources */,
