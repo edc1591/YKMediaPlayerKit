@@ -70,23 +70,27 @@
 - (NSURL *)videoURL:(YKQualityOptions)quality
 {
     NSString *strURL = nil;
-    
     switch (quality) {
+            // defaults to lower qualities if the higher ones are not available
+        case YKQualityHigh:
+            strURL = self.videos[@"hd720"];
+            if(strURL != nil) {
+                break;
+            }
+        case YKQualityMedium:
+            strURL = self.videos[@"medium"];
+            if(strURL != nil) {
+                break;
+            }
         case YKQualityLow:
             strURL = self.videos[@"small"];
             break;
-        case YKQualityMedium:
-            strURL = self.videos[@"medium"];
-            break;
-        case YKQualityHigh:
-            strURL = self.videos[@"hd720"];
     }
-    
+
     if (!strURL && self.videos.count > 0) {
         strURL = [self.videos allValues][0]; //defaults to 1st index
     }
-    
+
     return strURL ? [NSURL URLWithString:strURL] : nil;
 }
-
 @end
